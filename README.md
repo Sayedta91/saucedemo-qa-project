@@ -88,8 +88,7 @@ Checkout Tests
 - Missing postal code validation
 - Order completion
 
---
-
+---
 ## Project Structure
 ```bash
 project/
@@ -140,13 +139,17 @@ Testing types included:
 ## Setup & Run
 
 Install Dependencies:
+
 ``` pip install -r requirements.txt ```
 
 Install Playwright browsers
+
 ``` playwright install ```
 
 Run tests
+
 ``` pytest -v```
+
 
 Author
 
