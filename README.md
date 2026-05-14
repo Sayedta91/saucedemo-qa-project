@@ -1,7 +1,7 @@
 # SauceDemo QA Testing Project
 
 ## Project Overview
-The goal of this testing project was to check the main features of the application and identify any functional or usability issues through structured manual testing.
+The goal of this testing project was to check the main features of the application and identify any functional or usability issues through structured manual and automated testing.
 
 Tested areas include:
 
@@ -11,7 +11,7 @@ Tested areas include:
 - Checkout process
 
 Application: SauceDemo
-Testing Type: Manual Testing
+Testing Type: Manual Testing & Test Automation
 Tools: Excel, PDF
 Browser: Firefox (Latest Version)
 Operating System: Windows 10
@@ -22,6 +22,7 @@ In Scope:
 - Login functionality
 - Product inventory page
 - Add to cart / Remove from cart
+- Cart persistence
 - Checkout process
 
 Out of Scope:
@@ -29,7 +30,7 @@ Out of Scope:
 - Performance testing
 - Security testing
 
-__________________
+---
 
 ## Test Deliverables
 
@@ -47,13 +48,68 @@ Test Cases
 - Detailed test case documentation
 - Test steps
 - Expected results
-Actual results
-Pass/Fail status
+- Actual results
+- Pass/Fail status
 
 Bug Reports
 - Defects identified during execution
 - Severity classification
 - Reproduction steps
+
+---
+
+## Automation Framework
+
+I used Playwright, following the Page Object Model (POM) design pattern
+
+Login Tests
+- Valid login
+- Invalid login
+- Locked out user
+- Missing username
+- Missing password
+
+Inventory Tests
+- Product count validation
+- Sort A-Z / Z-A
+- Price sort low-high / high-low
+- Sorting persistence after refresh
+
+Cart Tests
+- Add item to cart
+- Remove item from cart
+- Cart retains items after navigation
+
+Checkout Tests
+- Checkout flow starts successfully
+- Valid checkout information
+- Empty field validation
+- Missing last name validation
+- Missing postal code validation
+- Order completion
+
+--
+
+## Project Structure
+```bash
+project/
+
+pages/
+├── login_page.py
+├── inventory_page.py
+├── cart_page.py
+└── checkout_page.py
+
+tests/
+├── test_login.py
+├── test_inventory.py
+├── test_cart.py
+└── test_checkout.py
+
+conftest.py
+requirements.txt
+```
+
 
 ## Test Summary
 
@@ -79,6 +135,18 @@ Testing types included:
 - Exploratory Testing
 - Regression Testing
 
+--- 
+
+## Setup & Run
+
+Install Dependencies:
+``` pip install -r requirements.txt ```
+
+Install Playwright browsers
+``` playwright install ```
+
+Run tests
+``` pytest -v```
 
 Author
 
