@@ -27,7 +27,7 @@ def test_sort_price_high_low(inventory_page):
     prices = inventory_page.get_product_prices()
     assert prices == sorted(prices, reverse=True)
 
-
+# BUG: sorting resets after page refresh
 # def test_sort_persists_after_reload(inventory_page):
 #     inventory_page.sort_products("za")
 
