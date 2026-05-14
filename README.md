@@ -16,7 +16,7 @@ Tools: Excel, PDF
 Browser: Firefox (Latest Version)
 Operating System: Windows 10
 
-## Test Scole
+## Test Scope
 
 In Scope:
 - Login functionality
