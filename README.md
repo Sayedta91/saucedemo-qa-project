@@ -30,7 +30,6 @@ Out of Scope:
 - Performance testing
 - Security testing
 
----
 
 ## Test Deliverables
 
@@ -56,7 +55,6 @@ Bug Reports
 - Severity classification
 - Reproduction steps
 
----
 
 ## Automation Framework
 
@@ -88,7 +86,6 @@ Checkout Tests
 - Missing postal code validation
 - Order completion
 
----
 ## Project Structure
 ```bash
 project/
@@ -134,7 +131,6 @@ Testing types included:
 - Exploratory Testing
 - Regression Testing
 
---- 
 
 ## Setup & Run
 
@@ -150,6 +146,7 @@ Run tests
 
 ``` pytest -v```
 
+---
 
 Author
 
